@@ -1,0 +1,31 @@
+{
+	"metadata": {
+		"root": {
+			"title": "OnlyCoders • For Devs, by Devs",
+			"description": "Where devs support devs, share code drops, grow their audience, and get discovered",
+			"openGraph": {
+				"title": "OnlyCoders • For Devs, by Devs",
+				"description": "Where devs support devs, share code drops, grow their audience, and get discovered",
+				"url": "https://onlycoders.dev",
+				"type": "website",
+				"image": "https://onlycoders.dev/og-image.jpg"
+			},
+			"twitter": {
+				"card": "summary_large_image",
+				"title": "OnlyCoders • For Devs, by Devs",
+				"description": "Where devs support devs, share code drops, grow their audience, and get discovered",
+				"image": "https://onlycoders.dev/og-image.jpg",
+				"site": "@onlycodersdev",
+				"creator": "@onlycodersdev"
+			}
+		}
+	},
+	"menu": {
+		"m1100": "",
+		"m1200": "",
+		"m1300": "",
+		"m1400": "",
+		"m1500": "",
+		"m1600": ""
+	}
+}

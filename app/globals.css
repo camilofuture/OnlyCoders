@@ -1,42 +1,62 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+	max-width: 100vw;
+	height: 100svh;
+	min-height: 100svh;
+	max-height: 100svh;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	background-color: #000;
 }
 
+/* Ocultar la pista (track) del scrollbar */
+body::-webkit-scrollbar {
+	width: 7px; /* Ancho del thumb */
+	background-color: transparent; /* Fondo del scrollbar */
+}
+
+/* Personalización del thumb (la parte que se desplaza) */
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.1); /* Color del thumb con transparencia */
+	border-radius: 4px; /* Bordes redondeados */
+	visibility: hidden; /* Ocultar el thumb inicialmente */
+}
+
+/* Mostrar el thumb cuando se está desplazando */
+body:hover::-webkit-scrollbar-thumb,
+body:active::-webkit-scrollbar-thumb,
+body:focus::-webkit-scrollbar-thumb {
+	visibility: visible; /* Hacer visible el thumb cuando hay interacción */
+	background-color: rgba(0, 0, 0, 0.1); /* Aumentar la opacidad del thumb al interactuar */
+}
+
+/* Ocultar el scrollbar en Firefox por defecto */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	scrollbar-width: thin; /* Establecer el ancho del scrollbar en Firefox */
+	scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Color del thumb y del fondo en Firefox */
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@keyframes xfadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.fade-enter {
+	opacity: 0;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.fade-enter-active {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+}
+.fade-exit {
+	opacity: 1;
+}
+.fade-exit-active {
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
 }
