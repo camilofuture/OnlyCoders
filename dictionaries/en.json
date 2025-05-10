@@ -21,11 +21,61 @@
 		}
 	},
 	"menu": {
-		"m1100": "",
-		"m1200": "",
-		"m1300": "",
-		"m1400": "",
-		"m1500": "",
-		"m1600": ""
+		"m1100": "METADEX",
+		"m1200": "PRICING",
+		"m1300": "PLATFORM",
+		"m1400": "RESOURCES",
+		"m1500": "COMPANY",
+		"m130101": "The Gate",
+		"m130101_text": "Transform your snippets into MetaFragments",
+		"m130102": "MetaDEX",
+		"m130102_text": "The ultimate knowledge base about all existing MetaFragments",
+		"m140101": "Docs",
+		"m140101_text": "Documentation for OnlyCoders platform",
+		"m140102": "Changelog",
+		"m140102_text": "Latest updates and changes in OnlyCoders",
+		"m140103": "Roadmap",
+		"m140103_text": "Future plans for OnlyCoders",
+		"m140201": "FAQ",
+		"m140201_text": "Find answers to your questions"
+	},
+	"appbar": {
+		"btn1": "START",
+		"btn2": "SIGN IN"
+	},
+	"home": {
+		"section1": {
+			"title": "WHERE CODE COMES TO LIFE",
+			"text_part1": "Built by devs for devs, OnlyCoders turns your snippets into",
+			"text_legacy": "legacy",
+			"text_part2": ", gathers",
+			"text_fans": "fans",
+			"text_part3": ", and generates",
+			"text_income": "income",
+			"text_part4": "while your",
+			"text_audience": "audience",
+			"text_part5": "profits too.",
+			"button_get_started": "Get Started",
+			"button_learn_culture": "Learn the OC Culture",
+			"announcement": "Commit 2: Find out what's coming"
+		},
+		"section2": {
+			"title": "TURN SNIPPETS INTO VALUE",
+			"subtitle": "Creative, social, and rewarding, OnlyCoders is the fastest way to turn snippets into value.",
+			"cards": [
+				{
+					"title": "Create MetaFragments",
+					"description": "Transform your best snippets into vibrant collectibles, each tagged by language and rarity levels that unlock as your fanbase grows alongside you."
+				},
+				{
+					"title": "Grow Your Fanbase",
+					"description": "Share exclusive drops, grow with your followers, and watch your creations get acclaimed by the best dev community in the world. Be a pioneer."
+				},
+				{
+					"title": "Earn & Trade",
+					"description": "Drop them, set the price, and decide whether they're plentiful or ultra‑limited. The Community will create value for you and them while trading."
+				}
+			]
+		}
 	}
 }

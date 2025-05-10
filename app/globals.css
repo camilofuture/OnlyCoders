@@ -8,6 +8,69 @@ body {
 	padding: 0;
 	scroll-behavior: smooth;
 	background-color: #000;
+	font-family: "var(--font-global)";
+}
+
+/* Animación para el efecto de brillo (glow-up) de los iconos */
+@keyframes iconGlowUp {
+	0% {
+		color: #ffffff55;
+	}
+	50% {
+		color: #ffffffaf;
+	}
+	100% {
+		color: #ffffff55;
+	}
+}
+
+/* Animación para el efecto de ripple desde el borde - primera onda */
+@keyframes ripple1 {
+	0% {
+		box-shadow: 0 0 0 0 rgba(41, 207, 119, 0.5);
+	}
+	100% {
+		box-shadow: 0 0 0 3px rgba(41, 207, 119, 0);
+	}
+}
+
+/* Animación para el efecto de ripple desde el borde - segunda onda */
+@keyframes ripple2 {
+	0% {
+		box-shadow: 0 0 0 0 rgba(41, 207, 119, 0.6);
+	}
+	100% {
+		box-shadow: 0 0 0 5px rgba(100, 188, 245, 0);
+	}
+}
+
+.announcement-card {
+	position: relative;
+	padding: 6px 18px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 16px;
+	overflow: visible;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(41, 207, 119, 0.4);
+	animation: ripple1 2s infinite;
+}
+
+.announcement-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 16px;
+	z-index: -1;
+	animation: ripple2 2s infinite 0.5s;
+}
+
+.announcement-card:hover {
+	transform: translateY(-3px);
+	border: 1px solid rgba(100, 188, 245, 0.5);
 }
 
 /* Ocultar la pista (track) del scrollbar */
@@ -46,6 +109,18 @@ body {
 	}
 }
 
+/* Menu animations for the dropdown menu */
+@keyframes swipeUp {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
+	}
+}
+
 .fade-enter {
 	opacity: 0;
 }
@@ -59,4 +134,271 @@ body {
 .fade-exit-active {
 	opacity: 0;
 	transition: opacity 0.5s ease-out;
+}
+
+/* GlitchText component styles */
+.glitch-container {
+	display: inline-block;
+	position: relative;
+}
+
+.glitching {
+	animation: glitchAnimation 0.3s linear;
+}
+
+@keyframes glitchAnimation {
+	0% {
+		transform: translate(0);
+		opacity: 1;
+	}
+	20% {
+		transform: translate(-2px, 2px);
+		opacity: 0.9;
+	}
+	40% {
+		transform: translate(-2px, -2px);
+		opacity: 0.8;
+		text-shadow: 1px 1px #29cf77, -1px -1px #ff00ff;
+	}
+	60% {
+		transform: translate(2px, 2px);
+		opacity: 0.9;
+		text-shadow: -1px -1px #29cf77, 1px 1px #ff00ff;
+	}
+	80% {
+		transform: translate(2px, -2px);
+		opacity: 0.9;
+	}
+	100% {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+/* Tron-like grid styles for HomeSection1 */
+.tron-grid-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.tron-grid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(to right, rgba(41, 207, 119, 0.15) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(41, 207, 119, 0.15) 1px, transparent 1px);
+	background-size: 40px 40px;
+	background-position: center center;
+}
+
+/* Gradientes para los bordes */
+.tron-grid::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+			to top,
+			black 0%,
+			rgba(0, 0, 0, 0.9) 5%,
+			rgba(0, 0, 0, 0.7) 15%,
+			rgba(0, 0, 0, 0.5) 25%,
+			rgba(0, 0, 0, 0.3) 35%,
+			rgba(0, 0, 0, 0.1) 45%,
+			transparent 55%
+		),
+		linear-gradient(
+			to bottom,
+			black 0%,
+			rgba(0, 0, 0, 0.9) 5%,
+			rgba(0, 0, 0, 0.7) 15%,
+			rgba(0, 0, 0, 0.5) 25%,
+			rgba(0, 0, 0, 0.3) 35%,
+			rgba(0, 0, 0, 0.1) 45%,
+			transparent 55%
+		);
+	z-index: 1;
+}
+
+.tron-grid::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+			to left,
+			black 0%,
+			rgba(0, 0, 0, 0.9) 5%,
+			rgba(0, 0, 0, 0.7) 15%,
+			rgba(0, 0, 0, 0.5) 25%,
+			rgba(0, 0, 0, 0.3) 35%,
+			rgba(0, 0, 0, 0.1) 45%,
+			transparent 55%
+		),
+		linear-gradient(
+			to right,
+			black 0%,
+			rgba(0, 0, 0, 0.9) 5%,
+			rgba(0, 0, 0, 0.7) 15%,
+			rgba(0, 0, 0, 0.5) 25%,
+			rgba(0, 0, 0, 0.3) 35%,
+			rgba(0, 0, 0, 0.1) 45%,
+			transparent 55%
+		);
+	z-index: 1;
+}
+
+.tron-glow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: radial-gradient(
+		circle at center,
+		rgba(41, 207, 119, 0.2) 0%,
+		rgba(41, 207, 119, 0.15) 20%,
+		rgba(41, 207, 119, 0.1) 40%,
+		rgba(41, 207, 119, 0.05) 60%,
+		transparent 80%
+	);
+	pointer-events: none;
+}
+
+/* Tron light particles */
+.tron-particle {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background: rgba(41, 207, 119, 0.8);
+	border-radius: 50%;
+	box-shadow: 0 0 10px 2px rgba(41, 207, 119, 0.6);
+	z-index: 1;
+}
+
+.particle-1 {
+	top: 20%;
+	left: 10%;
+	animation: particleMove1 8s infinite;
+}
+
+.particle-2 {
+	top: 70%;
+	left: 30%;
+	animation: particleMove2 12s infinite;
+}
+
+.particle-3 {
+	top: 40%;
+	left: 80%;
+	animation: particleMove3 10s infinite;
+}
+
+.particle-4 {
+	top: 10%;
+	left: 60%;
+	animation: particleMove4 15s infinite;
+}
+
+.particle-5 {
+	top: 80%;
+	left: 50%;
+	animation: particleMove5 9s infinite;
+}
+
+@keyframes particleMove1 {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(80vw, 70vh);
+		opacity: 0;
+	}
+}
+
+@keyframes particleMove2 {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-30vw, -60vh);
+		opacity: 0;
+	}
+}
+
+@keyframes particleMove3 {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-70vw, 30vh);
+		opacity: 0;
+	}
+}
+
+@keyframes particleMove4 {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(20vw, 80vh);
+		opacity: 0;
+	}
+}
+
+@keyframes particleMove5 {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate(40vw, -40vh);
+		opacity: 0;
+	}
 }

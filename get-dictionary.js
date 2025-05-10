@@ -1,4 +1,4 @@
-import "server-only";
+//import "server-only";
 
 // We enumerate all dictionaries here for better linting and typescript support
 // We also get the default import for cleaner types

@@ -21,11 +21,61 @@
 		}
 	},
 	"menu": {
-		"m1100": "",
-		"m1200": "",
-		"m1300": "",
-		"m1400": "",
-		"m1500": "",
-		"m1600": ""
+		"m1100": "METADEX",
+		"m1200": "PRECIO",
+		"m1300": "PLATAFORMA",
+		"m1400": "RECURSOS",
+		"m1500": "EMPRESA",
+		"m130101": "La Puerta",
+		"m130101_text": "Transforma tus fragmentos de código en MetaFragmentos",
+		"m130102": "MetaDEX",
+		"m130102_text": "La base de conocimientos definitiva sobre todos los MetaFragmentos existentes",
+		"m140101": "Docs",
+		"m140101_text": "Documentación para la plataforma OnlyCoders",
+		"m140102": "Changelog",
+		"m140102_text": "Últimos cambios y actualizaciones en OnlyCoders",
+		"m140103": "Roadmap",
+		"m140103_text": "Planes futuros para OnlyCoders",
+		"m140201": "FAQ",
+		"m140201_text": "Encuentra respuestas a tus preguntas"
+	},
+	"appbar": {
+		"btn1": "INICIAR",
+		"btn2": "INGRESAR"
+	},
+	"home": {
+		"section1": {
+			"title": "DONDE EL CÓDIGO COBRA VIDA",
+			"text_part1": "Hecho por devs para devs, OnlyCoders convierte tus fragmentos de código en",
+			"text_legacy": "legado",
+			"text_part2": ", reúne",
+			"text_fans": "fans",
+			"text_part3": ", y genera",
+			"text_income": "ingresos",
+			"text_part4": "mientras tu",
+			"text_audience": "audiencia",
+			"text_part5": "también se beneficia.",
+			"button_get_started": "Comenzar Ahora",
+			"button_learn_culture": "Conoce la Cultura OC",
+			"announcement": "Commit 2: Descubre lo que viene"
+		},
+		"section2": {
+			"title": "CONVIERTE FRAGMENTOS EN VALOR",
+			"subtitle": "Creativo, social y gratificante, OnlyCoders es la forma más rápida de convertir fragmentos de código en valor.",
+			"cards": [
+				{
+					"title": "Crea MetaFragmentos",
+					"description": "Transforma tus mejores fragmentos de código en vibrantes coleccionables, cada uno etiquetado por lenguaje y niveles de rareza que se desbloquean a medida que tu base de fans crece contigo."
+				},
+				{
+					"title": "Haz Crecer tu Base de Fans",
+					"description": "Comparte drops exclusivos, crece con tus seguidores y observa cómo tus creaciones son aclamadas por la mejor comunidad de devs del mundo. Sé un pionero."
+				},
+				{
+					"title": "Genera e Intercambia",
+					"description": "Lánzalos, establece el precio y decide si son abundantes o ultra-limitados. La Comunidad creará valor para ti y para ellos mientras intercambian."
+				}
+			]
+		}
 	}
 }

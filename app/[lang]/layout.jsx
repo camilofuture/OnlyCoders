@@ -1,10 +1,21 @@
-import { Chakra_Petch } from "next/font/google";
 import "../globals.css";
+
+import { IBM_Plex_Mono, Share_Tech_Mono, Tiny5 } from "next/font/google";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import { getDictionary } from "@/get-dictionary";
 import MainRoot from "./_components/layout/MainRoot";
+import theme from "@/kernel/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import Footer from "./_components/layout/Footer";
 
-const logoFont = Chakra_Petch({
-	variable: "--font-logo",
+const menuFont = IBM_Plex_Mono({
+	variable: "--font-global",
+	subsets: ["latin"],
+	weight: ["300", "400", "600", "700"],
+});
+
+const auxFont1 = Tiny5({
+	variable: "--font-aux-1",
 	subsets: ["latin"],
 	weight: ["400"],
 });
@@ -12,8 +23,12 @@ const logoFont = Chakra_Petch({
 const RootLayout = ({ children }) => {
 	return (
 		<html lang="en">
-			<body className={`${logoFont.variable}`}>
-				<MainRoot>{children}</MainRoot>
+			<body className={`${menuFont.variable} ${auxFont1.variable}`}>
+				<AppRouterCacheProvider>
+					<ThemeProvider theme={theme}>
+						<MainRoot>{children}</MainRoot>
+					</ThemeProvider>
+				</AppRouterCacheProvider>
 			</body>
 		</html>
 	);

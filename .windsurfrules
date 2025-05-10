@@ -1,0 +1,95 @@
+# General Code Style & Formatting (GENERAL)
+
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularization over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Use always arrow functions.
+
+# Naming Conventions (GENERAL)
+
+- Use camelCase for variable names (e.g., isLoading, hasError).
+- Favor named exports for components.
+
+# JavaScript Best Practices (GENERAL)
+
+- Use JavaScript for all code; prefer interfaces over types.
+- Use JsDoc for documentation.
+- Use functional components with JavaScript interfaces.
+- Enable strict mode in JavaScript for better type safety.
+
+# Syntax & Formatting (GENERAL)
+
+- Use the function keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX in client.
+- Use Prettier for consistent code formatting.
+
+# Styling & UI (CLIENT)
+
+- Use MUI's built-in components for common UI patterns and layouts, MUI is the only styling library used in the project, and the version is 7.x.x
+- Implement responsive design and use Grid from "@mui/material/Grid".
+- Implement dark mode support using MUI's theme.
+- Ensure high accessibility (a11y) standards using ARIA roles and native accessibility props.
+
+# File Structure
+
+- Use globals.css to put all the css code, do not create new css files.
+
+# Performance
+
+- Use React.memo for components that do not need to re-render on every prop change.
+- Use useCallback and useMemo for memoization.
+- Use the "useCallback" hook for event handlers.
+- Use the "useMemo" hook for computed values.
+
+# Performance
+
+- Use the best practices for performance in server using nextJS.
+
+# Error Handling
+
+- Use try-catch blocks for error handling.
+- It is a priority to have a custom errorHandler for this project, the idea is tell the server the error whenever it is neccesary in order to better depuration.
+
+# Ignore in Windsurf
+
+- Ignore all the files in the node_modules directory.
+- Ignore all the files in the build directory.
+
+# Used Technologies
+
+- React (version 19.x.x)
+- MUI (version 7.x.x)
+- NextJS (version 15.x.x)
+- Node.js
+- Clerk (For authentication and user management and payments and subscriptions)
+- @clerk/nextjs as the clerk adapter for nextJS (version 6.19.0)
+- mongodb as database
+
+# Project Description
+
+- This project is the source code of OnlyCoders, a platform that helps you manage your snippets and generate income from them.
+
+- The main goal of this project is to create a platform that helps you manage your snippets and generate income from them converting your snippets into collectibles that you can sell.
+
+- The buyers (community) will be able to buy your snippets (collectibles) and resell them in order to generate income.
+
+- The sellers (you) will be able to sell your snippets (collectibles) and generate income.
+
+- The platform will have a marketplace where you can sell your snippets (collectibles) and the community can buy them.
+
+- The platform will have a dashboard where you can manage your snippets (collectibles) and see your income.
+
+- The platform will have a community where you can interact with other sellers and buyers.
+
+- The platform will have a chat where you can interact with other sellers and buyers.
+
+- The platform will have a forum where you can interact with other sellers and buyers.
+
+- The platform will have a blog where you can read about the latest trends in the world of programming.
+
+- The platform will have a news section where you can read about the latest news in the world of programming.
+
+# WINDSURF premium model User Prompt AND premium model Flow Action credits
+
+- Usage of premium model User Prompt AND premium model Flow Action credits should be minimized as much as possible, always favoring more efficient alternatives whenever available. The goal is to optimize resource consumption to make the current plan last as long as possible.
